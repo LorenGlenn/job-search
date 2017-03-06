@@ -1,0 +1,10 @@
+<div class="col-md-4 job-box">
+  <h2>Dice.com results:</h2><hr>
+  <% @dice["resultItemList"].each do |d| %>
+  Company: <%= d["company"] %>, <%= d["location"]  %>
+  Job Title: <%= link_to d["jobTitle"], d["detailUrl"] %>
+  Posted <%= time_ago_in_words(d["date"]) %> ago
+  <hr>
+  <% end %>
+  <% binding.pry %>
+</div>

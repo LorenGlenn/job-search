@@ -17,6 +17,9 @@ class SearchesController < ApplicationController
 
     linkedinResponse = Linkedin.new(query)
     @linkedin = linkedinResponse.get_linkedin
+
+    githubResponse = Github.new(query)
+    @github = githubResponse.get_github
     render :show
   end
 

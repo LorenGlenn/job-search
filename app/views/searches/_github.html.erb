@@ -1,0 +1,8 @@
+<div class="col-md-4 job-box">
+  <h2>Github.com results:</h2><hr>
+  <% @github.each do |g| %>
+  Company: <%= g["company"] %>, <%= g["location"]  %>
+  Job Title: <%= link_to g["title"], g["url"] %>
+  <hr>
+  <% end %>
+</div>

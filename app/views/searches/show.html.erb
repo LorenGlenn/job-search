@@ -1,4 +1,24 @@
-<% @dice["resultItemList"].each do |d| %>
-<%= link_to d["jobTitle"], d["detailUrl"] %>
-<hr>
-<% end %>
+
+<div class="row">
+  <div class="col-md-4 job-box">
+    <h2>Dice.com results:</h2>
+    <% @dice["resultItemList"].each do |d| %>
+    <%= link_to d["jobTitle"], d["detailUrl"] %>
+    <hr>
+    <% end %>
+  </div>
+  <div class="col-md-4 job-box">
+    <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a><br>
+    <% @glassdoor["response"]["jobTitles"].each do |g| %>
+    <%= link_to g["jobTitle"], "https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword="+ g["jobTitle"]+ "&sc.keyword="+ g["jobTitle"] +"&locT=C&locId=1151614&jobType=" %>
+    <hr>
+    <% end %>
+  </div>
+  <div class="col-md-4 job-box">
+    <span id="indeed_at"><a title="Job Search" href="https://www.indeed.com">jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span><br>
+    <% @indeed["response"]["results"]["result"].each do |i| %>
+    <%= link_to i["jobtitle"], i["url"] %>
+    <hr>
+    <% end %>
+  </div>
+</div>

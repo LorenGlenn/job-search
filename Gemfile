@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rails_admin'
 gem 'httparty'
+gem 'omniauth-linkedin-oauth2'
 
 group :development, :test do
   gem 'byebug', platform: :mri

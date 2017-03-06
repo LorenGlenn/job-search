@@ -1,6 +1,6 @@
 <div class="col-md-4 job-box">
   <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a><hr>
-  <% @glassdoor["response"]["jobTitles"].each do |g| %>
+  <% @glassdoor.each do |g| %>
   <%= link_to g["jobTitle"], "https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword="+ g["jobTitle"]+ "&sc.keyword="+ g["jobTitle"] +"&locT=C&locId=1151614&jobType=" %>
   <hr>
   <% end %>

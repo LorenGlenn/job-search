@@ -1,8 +1,7 @@
-
+<%= link_to "Dice", search_path(dice: true, query: @query), remote: true %>
+<%= link_to "Github", search_path(github: true, query: @query), remote: true %>
+<%= link_to "Glassdoor", search_path(glassdoor: true, query: @query), remote: true %>
+<%= link_to "Indeed", search_path(indeed: true, query: @query), remote: true %>
 <div class="row job-section">
-  <%= render 'indeed' %>
-  <%= render 'dice' %>
-  <%= render 'form' %><br>
-  <%= render 'glassdoor' %>
-  <%= render 'github' %>
+
 </div>

@@ -1,3 +1,4 @@
+module ApiService
 class Glassdoor
 
   def initialize(query)
@@ -9,4 +10,5 @@ class Glassdoor
     response = glassdoor["response"]["jobTitles"]
     response
   end
+end
 end

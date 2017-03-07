@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  resources :searches
+  resources :searches, only: [:index ]
+  get 'search', to: 'searches#show'
 
   root 'searches#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

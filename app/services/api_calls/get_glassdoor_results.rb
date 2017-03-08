@@ -1,8 +1,10 @@
 module ApiService
 class Glassdoor
 
-  def initialize(query)
+  def initialize(query, city, state)
     @query = query
+    @city = city
+    @state = state
   end
 
   def get_glassdoor

@@ -1,12 +1,14 @@
 module ApiService
   class Dice
 
-    def initialize(query)
+    def initialize(query, city, state)
       @query = query
+      @city = city
+      @state = state
     end
 
     def get_dice
-      dice = HTTParty.get('http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=' + @query)
+      dice = HTTParty.get('http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=' + @query + '&city=' + @city)
       response = dice.parsed_response["resultItemList"]
       response
     end

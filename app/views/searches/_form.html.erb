@@ -1,5 +1,9 @@
 <%= form_tag(search_path, :method => "get") do %>
-  <%= label_tag(:query,'Search') %>
+  <%= label_tag(:query,'Keyword') %>
   <%= text_field_tag(:query)  %>
+  <%= label_tag(:city,'City (optional)') %>
+  <%= text_field_tag(:city)  %>
+  <%= label_tag(:state,'State (optional)') %>
+  <%= text_field_tag(:state)  %>
   <%= submit_tag("Search") %>
 <% end %>

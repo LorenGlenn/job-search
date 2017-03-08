@@ -1,9 +1,10 @@
 module ApiService
 class Github
 
-  def initialize(query, city)
+  def initialize(query, city, state)
     @query = query
     @city = city
+    @state = state
   end
 
   def get_github

@@ -1,7 +1,9 @@
-<%= link_to "Dice", search_path(dice: true, query: @query, city: @city, state: @state), remote: true %>
-<%= link_to "Github", search_path(github: true, query: @query, city: @city, state: @state), remote: true %>
-<%= link_to "Glassdoor", search_path(glassdoor: true, query: @query, city: @city, state: @state), remote: true %>
-<%= link_to "Indeed", search_path(indeed: true, query: @query, city: @city, state: @state), remote: true %>
+<ul class="nav nav-pills">
+  <li><a><%= link_to "Dice", search_path(dice: true, query: @query, city: @city, state: @state), remote: true %></a></li>
+  <li><a><%= link_to "Github", search_path(github: true, query: @query, city: @city, state: @state), remote: true %></a></li>
+  <li><a><%= link_to "Glassdoor", search_path(glassdoor: true, query: @query, city: @city, state: @state), remote: true %></a></li>
+  <li><a><%= link_to "Indeed", search_path(indeed: true, query: @query, city: @city, state: @state), remote: true %></a></li>
+</ul>
 <div class="row job-section">
 
 </div>

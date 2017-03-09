@@ -1,8 +1,12 @@
-<div class="col-md-4 job-box pre-scrollable">
-  <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a><hr>
-  <% @glassdoor.each do |g| %>
-  Location: <%= g["name"] %>
-  Job Postings: <%= link_to g["numJobs"], "https://www.glassdoor.com/Job/jobs.htm?typedKeyword=" + @query + "&sc.keyword=" + @query + "&locT=C&locId=" + g['id'].to_s %>
-  <hr>
-  <% end %>
+<div class="job-box pre-scrollable panel panel-warning">
+  <div class="panel-heading">
+    <h2 class="panel-title">Glassdoor.com results:</h2>
+  </div>
+  <div class="panel-body">
+    <% @glassdoor.each do |g| %>
+    Location: <%= g["name"] + ' - ' %>
+    Job Postings: <%= link_to g["numJobs"], "https://www.glassdoor.com/Job/jobs.htm?typedKeyword=" + @query + "&sc.keyword=" + @query + "&locT=C&locId=" + g['id'].to_s %>
+    <hr>
+    <% end %>
+  </div>
 </div>

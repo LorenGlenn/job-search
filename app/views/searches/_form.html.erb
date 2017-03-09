@@ -1,7 +1,7 @@
-<div class="form-area">
-  <%= form_tag(search_path, :method => "get", class: 'form-horizontal') do %>
-  <fieldset>
-    <legend>Search for Jobs</legend>
+<div class="form-section">
+    <%= form_tag(search_path, :method => "get", class: 'form-horizontal') do %>
+    <fieldset>
+      <legend>Search for Jobs</legend>
     <div class="form-group">
       <%= label_tag(:query,'Keyword', class: 'col-lg-2 control-label') %>
       <div class="col-lg-10">
@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <%= submit_tag("Search", class: 'btn btn-success animate') %>
+        <%= submit_tag("Search", class: 'btn btn-success') %>
         <button type="reset" class="btn btn-danger">Clear</button>
       </div>
     </div>

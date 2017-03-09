@@ -26,6 +26,37 @@
  *= require_searches
  */
 
+ .nav-pills {
+   padding-left: 15% !important;
+ }
+
+ #dice{
+   opacity: 0;
+   animation: buttons .5s;
+   animation-fill-mode: forwards;
+ }
+
+ #github{
+   opacity: 0;
+   animation: buttons .5s;
+   animation-fill-mode: forwards;
+   animation-delay: .5s;
+ }
+
+ #glassdoor{
+   opacity: 0;
+   animation: buttons .5s;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+ }
+
+ #indeed{
+   opacity: 0;
+   animation: buttons .5s;
+   animation-fill-mode: forwards;
+   animation-delay: 1.5s;
+ }
+
 
 .new-search{
   color: #0ce3ac;
@@ -35,32 +66,24 @@ select {
   color: black !important;
 }
 
- @keyframes form-shift {
-   0% { top: 5% }
-   100% { top: 35% }
- }
-
- @keyframes form-shift-back {
-   0% { top: 35% }
-   100% { top: 5% }
- }
-
- .animation {
-   animation: form-shift-back 1s;
+ @keyframes buttons {
+   from { opacity: 0; }
+   to { opacity: 1; }
  }
 
 .form-area {
   position: absolute;
   max-width: 500px;
   min-width: 500px;
-  background-color: #333333;
-  padding: 30px;
-  border-radius: 5px;
+  top: 15%;
   left: 50%;
   margin-left: -250px;
-  animation: form-shift 1s;
-  // animation-duration: 1s;
-  animation-fill-mode: forwards;
+}
+
+.form-section {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #333333;
 }
 
 

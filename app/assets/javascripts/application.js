@@ -14,7 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).click(function(){
-  $(".animate").addClass("animation");
-});

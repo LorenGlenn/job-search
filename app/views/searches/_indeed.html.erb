@@ -1,10 +1,14 @@
-<div class="col-md-4 job-box pre-scrollable">
-  <span id="indeed_at"><a title="Job Search" href="https://www.indeed.com">jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span><hr>
-  <% @indeed.each do |i| %>
-  Company: <%= i["company"] %>, <%= i["formattedLocation"] %><br>
-  Job Title: <%= link_to i["jobtitle"], i["url"] %><br>
-  Description: <%= i["snippet"] %><br>
-  Posted <%= i["formattedRelativeTime"] %>
-  <hr>
-  <% end %>
+<div class="job-box pre-scrollable"><div class="job-box pre-scrollable panel panel-info">
+  <div class="panel-heading">
+    <h2 class="panel-title">Indeed.com results:</h2>
+  </div>
+  <div class="panel-body">
+    <% @indeed.each do |i| %>
+    Company: <%= i["company"] %>, <%= i["formattedLocation"] %><br>
+    Job Title: <%= link_to i["jobtitle"], i["url"] %><br>
+    Description: <%= i["snippet"] %><br>
+    Posted <%= i["formattedRelativeTime"] %>
+    <hr>
+    <% end %>
+  </div>
 </div>

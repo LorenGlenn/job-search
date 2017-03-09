@@ -1,9 +1,13 @@
-<div class="col-md-4 job-box pre-scrollable">
-  <h2>Dice.com results:</h2><hr>
-  <% @dice.each do |d| %>
-  Company: <%= d["company"] %>, <%= d["location"]  %>
-  Job Title: <%= link_to d["jobTitle"], d["detailUrl"] %>
-  Posted <%= time_ago_in_words(d["date"]) %> ago
-  <hr>
-  <% end %>
+<div class="job-box pre-scrollable panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">Dice.com results:</h2>
+  </div>
+  <div class="panel-body">
+    <% @dice.each do |d| %>
+    Company: <%= d["company"] %>, <%= d["location"]  %><br>
+    Job Title: <%= link_to d["jobTitle"], d["detailUrl"] %><br>
+    Posted <%= time_ago_in_words(d["date"]) %> ago
+    <hr>
+    <% end %>
+  </div>
 </div>

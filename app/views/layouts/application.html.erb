@@ -32,8 +32,11 @@
           <%= flash[:alert] %>
           <%= flash[:notice] %>
         </div>
+        <div class="form-area">
+
           <%= render 'form' %>
           <%= yield %>
+        </div>
       </div>
   </body>
 </html>

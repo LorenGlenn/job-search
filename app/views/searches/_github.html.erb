@@ -1,14 +1,18 @@
-<div class="col-md-4 job-box pre-scrollable">
-  <% if @github.any? %>
-    <h2>Github.com results:</h2><hr>
-    <% @github.each do |g| %>
-    Company: <%= g["company"] %>, <%= g["location"]  %>
-    Job Title: <%= link_to g["title"], g["url"] %>
-    <hr>
+<div class="job-box pre-scrollable panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Github.com results:</h2>
+  </div>
+  <div class="panel-body">
+    <% if @github.any? %>
+      <% @github.each do |g| %>
+      Company: <%= g["company"] %>, <%= g["location"]  %><br>
+      Job Title: <%= link_to g["title"], g["url"] %>
+      <hr>
+      <% end %>
+    <% else %>
+      <p>
+        There are no results.
+      </p>
     <% end %>
-  <% else %>
-    <p>
-      There are no results.
-    </p>
-  <% end %>
+  </div>
 </div>
